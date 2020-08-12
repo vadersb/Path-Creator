@@ -6,6 +6,6 @@
 
 [Download from asset store](https://assetstore.unity.com/packages/tools/utilities/b-zier-path-creator-136082)
 
-[URL for Unity Package Manager](https://github.com/vadersb/Path-Creator.git?path=/Path Creator Project/Assets/PathCreator/Core)
+[URL for Unity Package Manager](https://github.com/vadersb/Path-Creator.git?path=/Path%20Creator%20Project/Assets/PathCreator/Core)
 
 ![Path Creator](https://i.imgur.com/xqTCNWK.png)
