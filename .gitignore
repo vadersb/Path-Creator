@@ -36,3 +36,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Path Creator Project/Logs/Packages-Update.log
+Path Creator Project/Packages/packages-lock.json
+Path Creator Project/Logs/Packages-Update.log
