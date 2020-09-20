@@ -164,5 +164,39 @@ namespace PathCreation.Utility {
                 }
             }
         }
+        
+        #region extensions methods for SerializedVertexPath
+        
+        public static Vector3 TransformDirection (Vector3 p, Quaternion r, PathSpace space) 
+        {
+            Quaternion constrainedRot = r;
+            ConstrainRot (ref constrainedRot, space);
+            return constrainedRot * p;
+        }
+        
+        public static Vector3 TransformPoint (Vector3 p, Vector3 position, Quaternion rotation, Vector3 lossyScale, PathSpace space) {
+            // path only works correctly for uniform scales, so average out xyz global scale
+            float scale = Vector3.Dot (lossyScale, Vector3.one) / 3f;
+            Vector3 constrainedPos = position;
+            Quaternion constrainedRot = rotation;
+            ConstrainPosRot (ref constrainedPos, ref constrainedRot, space);
+            return constrainedRot * p * scale + constrainedPos;
+        }
+        
+        // Transform point from world to local space
+        public static Vector3 InverseTransformPoint (Vector3 p, Vector3 position, Quaternion rotation, Vector3 lossyScale, PathSpace space) {
+            Vector3 constrainedPos = position;
+            Quaternion constrainedRot = rotation;
+            ConstrainPosRot (ref constrainedPos, ref constrainedRot, space);
+
+            // path only works correctly for uniform scales, so average out xyz global scale
+            float scale = Vector3.Dot (lossyScale, Vector3.one) / 3f;
+            var offset = p - constrainedPos;
+
+            return Quaternion.Inverse (constrainedRot) * offset / scale;
+        }
+        
+        
+        #endregion
     }
 }
