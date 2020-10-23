@@ -33,8 +33,8 @@ namespace PathCreation {
         public readonly Vector3 up;
 
         // Default values and constants:
-        public const int accuracy = 10; // A scalar for how many times bezier path is divided when determining vertex positions
-        public const float minVertexSpacing = .01f;
+        public const int accuracy = 2000; // A scalar for how many times bezier path is divided when determining vertex positions
+        public const float minVertexSpacing = .000001f;
 
         Transform transform;
 
