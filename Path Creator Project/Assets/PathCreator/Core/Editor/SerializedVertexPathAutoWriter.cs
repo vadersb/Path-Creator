@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-namespace PathCreation
+namespace PathCreationEditor
 {
 
     [ExecuteAlways]
