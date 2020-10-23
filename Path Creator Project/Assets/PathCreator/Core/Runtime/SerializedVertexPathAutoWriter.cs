@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using PathCreation;
-using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
-namespace PathCreationEditor
+
+namespace PathCreation
 {
 
     [ExecuteAlways]
@@ -19,6 +22,7 @@ namespace PathCreationEditor
 
         public void Awake()
         {
+            #if UNITY_EDITOR
             pathCreator = GetComponent<PathCreator>();
 
             if (pathCreator == null)
@@ -26,14 +30,17 @@ namespace PathCreationEditor
                 Debug.LogWarning("SerializedVertexPathAutoWriter can't find PathCreator script");
                 return;
             }
+            #endif
         }
 
         public void Start()
         {
+            #if UNITY_EDITOR
             pathCreator.pathUpdated += OnPathUpdated;
+            #endif
         }
 
-
+        #if UNITY_EDITOR
         private void OnPathUpdated()
         {
             if (pathCreator != null && serializedVertexPath != null)
@@ -42,5 +49,6 @@ namespace PathCreationEditor
                 EditorUtility.SetDirty(serializedVertexPath);
             }
         }
+        #endif
     }
 }

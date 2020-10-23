@@ -156,9 +156,9 @@ MonoBehaviour:
       points:
       - {x: -4.350084, y: 0.31420028, z: 0.3292033}
       - {x: -4.3119984, y: 0.66119146, z: 2.7223263}
-      - {x: 2.0068643, y: 4.7879047, z: 2.2389562}
-      - {x: 1.3923181, y: 1.9449731, z: 2.222168}
-      - {x: 0.77777195, y: -0.8979591, z: 2.2053797}
+      - {x: 2.0308166, y: 4.7639475, z: 2.2389562}
+      - {x: 1.4162704, y: 1.9210157, z: 2.222168}
+      - {x: 0.8017242, y: -0.9219165, z: 2.2053797}
       - {x: 4.16408, y: -0.44785511, z: 2.1293974}
       - {x: 4.3446193, y: -0.6192361, z: 0.36958665}
       - {x: 4.5251584, y: -0.7906171, z: -1.390224}
@@ -181,7 +181,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 69
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0
     vertexPathMinVertexSpacing: 0
     showTransformTool: 1
@@ -225,10 +225,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 184727957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 888723876d1663a4c88d57376c3f7ad3, type: 3}
+  m_Script: {fileID: 11500000, guid: d65098b1fef48fb41862991303dd50bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializedVertexPath: {fileID: 11400000, guid: e0c18aceaf261e84c8e21ea2253a5feb,
+  serializedVertexPath: {fileID: 11400000, guid: 92876a63124aef84da15906245d37009,
     type: 2}
 --- !u!1001 &1266884696
 PrefabInstance:
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a1b79fcbd2ab144b9291bd55546e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 11400000, guid: e0c18aceaf261e84c8e21ea2253a5feb, type: 2}
+  path: {fileID: 11400000, guid: 92876a63124aef84da15906245d37009, type: 2}
   endOfPathInstruction: 0
   speed: 10
 --- !u!1 &433389833536472965
