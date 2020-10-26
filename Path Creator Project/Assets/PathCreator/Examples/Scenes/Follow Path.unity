@@ -154,12 +154,9 @@ MonoBehaviour:
     _bezierPath:
       points:
       - {x: 0, y: 0, z: 0}
-      - {x: 0.021149099, y: 0.0007251501, z: 0}
-      - {x: 0.030793378, y: 0.012272885, z: 0}
-      - {x: 0.024245465, y: 0.02559042, z: 0}
-      - {x: 0.016309178, y: 0.041731715, z: 0}
-      - {x: -0.014222282, y: 0.019049168, z: 0}
-      - {x: 0, y: 0.0532552, z: 0}
+      - {x: 0.049025234, y: 0.037065744, z: 0}
+      - {x: -0.06782042, y: 0.060046673, z: 0}
+      - {x: 0, y: 0.1, z: 0}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -171,12 +168,11 @@ MonoBehaviour:
       perAnchorNormalsAngle:
       - 0
       - 0
-      - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0
-    vertexPathMinVertexSpacing: 0.002
+    vertexPathMinVertexSpacing: 0.001
     showTransformTool: 1
     showPathBounds: 0
     showPerSegmentBounds: 0
@@ -193,7 +189,7 @@ MonoBehaviour:
     showVertexPathOptions: 1
     showNormals: 0
     showNormalsHelpInfo: 0
-    tabIndex: 1
+    tabIndex: 0
   initialized: 1
 --- !u!4 &26121025
 Transform:
@@ -288,7 +284,7 @@ MonoBehaviour:
     showVertexPathOptions: 1
     showNormals: 0
     showNormalsHelpInfo: 0
-    tabIndex: 1
+    tabIndex: 0
   initialized: 1
 --- !u!4 &184727959
 Transform:
