@@ -55,7 +55,7 @@ namespace PathCreation
 		public int NumPoints => localPoints.Length;
 		
 
-		public void CopyVertexPathData(VertexPath vertexPath)
+		public void CopyVertexPathData(VertexPath vertexPath, bool useLocalTransform)
 		{
 			space = vertexPath.space;
 			isClosedLoop = vertexPath.isClosedLoop;
@@ -73,9 +73,18 @@ namespace PathCreation
 
 			up = vertexPath.up;
 
-			transformPosition = vertexPath.LinkedTransform.position;
-			transformRotation = vertexPath.LinkedTransform.rotation;
-			transformLossyScale = vertexPath.LinkedTransform.lossyScale;
+			if (useLocalTransform)
+			{
+				transformPosition = vertexPath.LinkedTransform.localPosition;
+				transformRotation = vertexPath.LinkedTransform.localRotation;
+				transformLossyScale = vertexPath.LinkedTransform.localScale;
+			}
+			else
+			{
+				transformPosition = vertexPath.LinkedTransform.position;
+				transformRotation = vertexPath.LinkedTransform.rotation;
+				transformLossyScale = vertexPath.LinkedTransform.lossyScale;
+			}
 			
 			pathUpdated?.Invoke();
 		}

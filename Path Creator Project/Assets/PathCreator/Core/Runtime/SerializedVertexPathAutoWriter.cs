@@ -17,6 +17,8 @@ namespace PathCreation
     {
         public SerializedVertexPath serializedVertexPath;
 
+        public bool useLocalTransform = true;
+        
         private PathCreator pathCreator;
 
 
@@ -45,7 +47,7 @@ namespace PathCreation
         {
             if (pathCreator != null && serializedVertexPath != null)
             {
-                serializedVertexPath.CopyVertexPathData(pathCreator.path);
+                serializedVertexPath.CopyVertexPathData(pathCreator.path, useLocalTransform);
                 EditorUtility.SetDirty(serializedVertexPath);
             }
         }
