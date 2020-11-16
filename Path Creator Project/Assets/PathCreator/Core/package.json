@@ -1,7 +1,7 @@
 {
     "name": "vadersb.path-creator",
     "displayName": "Path Creator (VaderSB fork)",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "unity": "2019.4",
     "description": "A fork of https://github.com/SebLague/Path-Creator with a package specified and also some extras.",
     "category": "vadersb"
