@@ -53,7 +53,22 @@ namespace PathCreation
 		#endregion
 
 		public int NumPoints => localPoints.Length;
-		
+
+		public float Length => length;
+
+		public PathSpace Space => space;
+
+		public bool IsClosedLoop => isClosedLoop;
+
+		public Bounds Bounds => bounds;
+
+		public Vector3 Up => up;
+
+
+		public Vector3 TransformPosition => transformPosition;
+		public Quaternion TransformRotation => transformRotation;
+		public Vector3 TransformLossyScale => transformLossyScale;
+
 
 		public void CopyVertexPathData(VertexPath vertexPath, bool useLocalTransform)
 		{
